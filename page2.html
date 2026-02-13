@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Message ❤️</title>
+
+<style>
+body{
+background:#b30000;
+color:white;
+text-align:center;
+font-family:Arial;
+}
+
+#text{
+font-size:30px;
+margin-top:100px;
+}
+button{
+padding:15px 30px;
+font-size:20px;
+margin-top:30px;
+border:none;
+border-radius:30px;
+background:white;
+color:red;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="text"></div>
+
+<button onclick="next()">Next ❤️</button>
+
+<script>
+let msg="You are not just my bestie... You are very special ❤️";
+let i=0;
+
+function typing(){
+if(i<msg.length){
+document.getElementById("text").innerHTML+=msg.charAt(i);
+i++;
+setTimeout(typing,60);
+}
+}
+typing();
+
+function next(){
+window.location.href="page3.html";
+}
+</script>
+
+</body>
+</html>
