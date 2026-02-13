@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine's Day ❤️</title>
+
+<style>
+body{
+background:linear-gradient(135deg,#8B0000,#FF0000);
+color:white;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+}
+
+img{
+width:260px;
+border-radius:20px;
+margin-top:20px;
+box-shadow:0 0 30px white;
+}
+
+button{
+padding:15px 30px;
+font-size:20px;
+margin-top:20px;
+border:none;
+border-radius:30px;
+background:white;
+color:red;
+cursor:pointer;
+}
+
+button:hover{
+background:black;
+color:white;
+}
+
+.heart{
+position:absolute;
+color:white;
+font-size:30px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy Valentine's Day ❤️</h1>
+<h2>Muqaddas Javed ❤️</h2>
+
+<img src="muqaddas.jpg">
+
+<br>
+
+<button onclick="next()">Next ❤️</button>
+
+<script>
+function next(){
+window.location.href="page2.html";
+}
+
+setInterval(()=>{
+let heart=document.createElement("div");
+heart.innerHTML="❤️";
+heart.className="heart";
+heart.style.left=Math.random()*100+"vw";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),5000);
+},300);
+</script>
+
+</body>
+</html>
